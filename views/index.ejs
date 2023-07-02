@@ -1,0 +1,37 @@
+
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+ <!-- Main -->
+ <main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justifty-between">
+            <a href="/add-task" class="border-shadow">
+                <span class="text-gradient">Add Task<i class="fa-solid fa-notes"></i></span>
+            </a>
+        </div>
+        <!-- Form -->
+        <form action="/" method="POST">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Completed</th>
+                        <th>Task Name</th>
+                        <th>Task Priority</th>
+                        <th>Task Label</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%- include('include/_show') %>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</main>
+<!-- /Main -->
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->

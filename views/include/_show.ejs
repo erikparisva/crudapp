@@ -1,0 +1,16 @@
+<% for(var i = 0; i < tasks.length; i++) { %>
+<tr>
+    <td><input type="checkbox"></td>
+    <td><%= tasks[i].name %></td>
+    <td><%= tasks[i].priority %></td>
+    <td><%= tasks[i].label %></td>
+    <td>
+        <a href="/edit-task?id=<%= tasks[i]._id%>" class="btn border-shadow update">
+            <span class="text-gradient"><i class="fa-solid fa-pen-to-square"></i></span>
+        </a>
+        <a class="btn border-shadow delete" data-id=<%= tasks[i]._id %>>
+            <span class="text-gradient"><i class="fa-solid fa-trash"></i></i></span>
+        </a>
+    </td>
+</tr>
+<% } %>

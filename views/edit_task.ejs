@@ -1,0 +1,69 @@
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+    <!-- Main -->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justifty-between">
+                <div class="filter">
+                    <a href="/"><i class="fa-solid fa-backward"></i>All Tasks</a>
+                </div>
+            </div>
+            <div class="form-title text-center">
+                <h2 class="text-dark">Edit Task</h2>
+                <span class="text-light">Use the form below to edit a task</span>
+            </div>
+                        <!-- Form -->
+                        <form method="POST" id="edit_task">
+                            <div class="new_task">
+                             <div class="form-group">
+                                 <label for="taskName" class="text-light">Task Name</label>
+                                 <input type="hidden" name="id" value="<%= task._id%>">
+                                 <input type="text" name="taskName" value="<%= task.name%>" placeholder="Task Name">
+                             </div>
+                             <div class="form-group">
+                                 <label for="taskPriority" class="text-light">Task Priority</label>
+                                 <div class="radio inline">
+                                     <input type="radio" id="radio-1" name="taskPriority" value="Low" <%= task.taskPriority == 'Low'?'checked':'' %>>
+                                     <label for="radio-1" class="radio-label">Low</label>
+                                 </div>
+                                 <div class="radio inline">
+                                     <input type="radio" id="radio-2" name="taskPriority" value="Medium" <%= task.taskPriority == 'Medium'?'checked':'' %>>
+                                     <label for="radio-2" class="radio-label">Medium</label>
+                                 </div>
+                                 <div class="radio inline">
+                                     <input type="radio" id="radio-3" name="taskPriority" value="High" <%= task.taskPriority == 'High'?'checked':'' %>>
+                                     <label for="radio-3" class="radio-label">High</label>
+                                 </div>
+                             </div>
+                             <div class="form-group">
+                                 <label for="taskPriority" class="text-light">Task Label</label>
+                                 <div class="radio inline">
+                                     <input type="radio" id="radio-4" name="taskLabel" value="Personal" <%= task.taskLabel == 'Personal'?'checked':'' %>>
+                                     <label for="radio-4" class="radio-label">Personal</label>
+                                 </div>
+                                 <div class="radio inline">
+                                     <input type="radio" id="radio-5" name="taskLabel" value="Work" <%= task.taskLabel == 'Work'?'checked':'' %>>
+                                     <label for="radio-5" class="radio-label">Work</label>
+                                 </div>
+                                 <div class="radio inline">
+                                     <input type="radio" id="radio-6" name="taskLabel" value="Shopping" <%= task.taskLabel == 'Shopping'?'checked':'' %>>
+                                     <label for="radio-6" class="radio-label">Shopping</label>
+                                 </div>
+                             </div>
+             
+                             
+                             <div class="form-group">
+                                 <button type="submit" class="btn text-dark update">Add</button>
+                             </div>
+             
+                            </div>
+                         </form>
+        </div>
+    </main>
+<!-- /Main -->
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->
