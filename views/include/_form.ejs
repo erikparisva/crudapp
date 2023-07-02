@@ -4,35 +4,35 @@
                  <div class="form-group">
                      <label for="name" class="text-light">Task Name</label>
                      <input type="hidden" name="id" value="">
-                     <input type="text" name="name" value="<%=task.name%>" placeholder="Task Name">
+                     <input type="text" name="name" value="" placeholder="Task Name">
                  </div>
                  <div class="form-group">
                      <label for="priority" class="text-light">Task Priority</label>
                      <div class="radio inline">
-                         <input type="radio" id="radio-1" name="priority" value="Low" <%= task.priority == 'Low'?'checked':'' %>>
+                         <input type="radio" id="radio-1" name="priority" value="Low">
                          <label for="radio-1" class="radio-label">Low</label>
                      </div>
                      <div class="radio inline">
-                         <input type="radio" id="radio-2" name="priority" value="Medium" <%= task.priority == 'Medium'?'checked':'' %>>
+                         <input type="radio" id="radio-2" name="priority" value="Medium">
                          <label for="radio-2" class="radio-label">Medium</label>
                      </div>
                      <div class="radio inline">
-                         <input type="radio" id="radio-3" name="priority" value="High" <%= task.priority == 'High'?'checked':'' %>>
+                         <input type="radio" id="radio-3" name="priority" value="High">
                          <label for="radio-3" class="radio-label">High</label>
                      </div>
                  </div>
                  <div class="form-group">
                      <label for="label" class="text-light">Task Label</label>
                      <div class="radio inline">
-                         <input type="radio" id="radio-4" name="label" value="Personal" <%= task.label == 'Personal'?'checked':'' %>>
+                         <input type="radio" id="radio-4" name="label" value="Personal">
                          <label for="radio-4" class="radio-label">Personal</label>
                      </div>
                      <div class="radio inline">
-                         <input type="radio" id="radio-5" name="label" value="Work" <%= task.label == 'Work'?'checked':'' %>>
+                         <input type="radio" id="radio-5" name="label" value="Work">
                          <label for="radio-5" class="radio-label">Work</label>
                      </div>
                      <div class="radio inline">
-                         <input type="radio" id="radio-6" name="label" value="Shopping" <%= task.label == 'Shopping'?'checked':'' %>>
+                         <input type="radio" id="radio-6" name="label" value="Shopping">
                          <label for="radio-6" class="radio-label">Shopping</label>
                      </div>
                  </div>

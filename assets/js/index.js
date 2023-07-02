@@ -1,6 +1,3 @@
-$("#add_task").submit(function(event){
-    alert("Task inserted successfully!")
-})
 
 $("#edit_task").submit(function(event){
     event.preventDefault();
@@ -29,14 +26,14 @@ if(window.location.pathname == "/"){
         var id = $(this).attr("data-id")
 
         var request = {
-            "url":`http://localhost:3000/api/tasks/${data.id}`,
+            "url":`http://localhost:3000/api/tasks/${id}`,
             "method": "DELETE"
         }
 
         if(confirm("Are you sure you want to delete this task?")){
             $.ajax(request).done(function(response){
                 alert("Data deleted successfully!")
-                location.reload()
+                location.reload();
             })
         }
     })

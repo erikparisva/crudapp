@@ -2,7 +2,7 @@ var taskdb = require('../model/model');
 
 // create and save new task(s)
 exports.create = (req,res) => {
-    if(!req.body){
+    if(!req.body.name){
         res.status(400).send({message:"Field cannot be empty!"})
         return;
     }
@@ -18,7 +18,7 @@ exports.create = (req,res) => {
     task
         .save(task)
         .then(data => {
-            res.send(data)
+            //res.send(data)
             res.redirect('/add-task')
         })
         .catch(err =>{

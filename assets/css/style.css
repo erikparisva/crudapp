@@ -47,7 +47,8 @@ a {
 }
 
 .text-dark {
-    color: var(--dark);
+    color: #003a6b;
+    background: none;
 }
 
 .inline {
@@ -59,14 +60,14 @@ a {
 }
 
 .text-gradient {
-    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    background: linear-gradient(to right, #1b5886, #6e81d6);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 #header nav {
-    background-color: #06d6a0;
+    background-color: #a3c0ff;
     padding: 1em 0;
     width: 100%;
 }
@@ -104,7 +105,7 @@ table {
 }
 
 .table tr:hover {
-    background-color: #06d6a0;
+    background-color: #a3c0ff;
 }
 
 .table tr:hover td > a {
@@ -113,8 +114,8 @@ table {
 
 .table .thead-dark th{
     color: #fff;
-    background-color: var(--dark);
-    border-color: #32383e;
+    background-color: #003a6b;
+    border-color: #003aae;
 }
 
 @media only screen and (max-width: 1024px){
@@ -193,13 +194,13 @@ table {
 }
 
 .radio input[type='radio']:checked + .radio-label:before{
-    background-color:#06d6a0;
+    background-color:#a3c0ff;
     box-shadow: inset 0 0 0 4px #e9ecef;
 }
 
 .radio input[type='radio']:focus + .radio-label:before{
     outline: none;
-    border-color: #06d6a0;
+    border-color: #a3c0ff;
 }
 
 .radio input[type='radio']:disabled + .radio-label:before{
@@ -212,7 +213,7 @@ table {
 #add_task .form-group .btn {
     width:100%;
     padding: .9em 1em;
-    background-color: #06d6a0;
+    background-color: #a3c0ff;
     border: none;
     font-family: 'Poppins', sans-serif;
     font-size: 1em;
@@ -225,4 +226,8 @@ table {
 #add_task .form-group .btn:hover {
     background-color: var(--dark);
     color: var(--border);
+}
+
+.delete {
+    cursor: pointer;
 }
