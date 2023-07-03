@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 :root {
-    --dark: #2b2d42;
+    --main-blue: #003a6b;
     --light: #adb6bd;
     --border: #dee2e6;
     --border-btn: #edf2f4;
@@ -115,7 +115,7 @@ table {
 .table .thead-dark th{
     color: #fff;
     background-color: #003a6b;
-    border-color: #003aae;
+    border-color: var(--main-blue);
 }
 
 @media only screen and (max-width: 1024px){
@@ -224,10 +224,22 @@ table {
 
 #edit_task .form-group .btn:hover,
 #add_task .form-group .btn:hover {
-    background-color: var(--dark);
+    background-color: var(--main-blue);
     color: var(--border);
 }
 
 .delete {
     cursor: pointer;
+}
+
+.copy {
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    height:1.5rem;
+    color: var(--main-blue)
+}
+
+.filter {
+    color: linear-gradient(to right, #1b5886, #6e81d6);
 }
